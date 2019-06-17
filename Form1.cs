@@ -16,5 +16,10 @@ namespace Game
         {
             InitializeComponent();
         }
+
+        private void lblScore_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
