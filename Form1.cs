@@ -28,18 +28,20 @@ namespace Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Use your specific keys to move your paddle. " +
+    "\n Blue Team: |Up Arrow, Down arrow| |Numpad Arrow Up + Down| " +
+    "\n Red Team: |W Key, S Key| |H Key, N Key| " +
+    "\n Don't let the ball reach your end. " +
+    "\n Every ball that gets passed is a point." +
+    "\n Keep and eye on the time as the pace might start to pick up. " +
+    "\n \n Enter your respective team names. " +
+    "\n Click Start to begin", "Game Instructions");
+            txtName.Focus();
 
         }
 
         private void mnuStart_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Use the left and right arrow keys to move the spaceship. " +
-                "\n Don't get hit by the planets! " +
-                "\n Every planet that gets past scores a point." +
-                "\n If a planet hits a spaceship a life is lost! " +
-                "\n \n Enter your Name press tab and enter the number of lives. " +
-                "\n Click Start to begin", "Game Instructions");
-            txtName.Focus();
 
         }
     }
