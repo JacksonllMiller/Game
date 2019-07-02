@@ -38,7 +38,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblScore1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
@@ -147,12 +147,12 @@
             this.lblScore1.TabIndex = 8;
             this.lblScore1.Text = "0";
             // 
-            // textBox1
+            // txtName1
             // 
-            this.textBox1.Location = new System.Drawing.Point(563, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtName1.Location = new System.Drawing.Point(563, 52);
+            this.txtName1.Name = "txtName1";
+            this.txtName1.Size = new System.Drawing.Size(100, 20);
+            this.txtName1.TabIndex = 9;
             // 
             // menuStrip1
             // 
@@ -212,7 +212,7 @@
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName1);
             this.Controls.Add(this.lblScore1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -246,7 +246,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblScore1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnuStart;
         private System.Windows.Forms.ToolStripMenuItem mnuStop;
