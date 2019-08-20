@@ -1,0 +1,46 @@
+C:\Users\Franco_\Desktop\gioco2\gioco2\bin\Debug\gioco2.exe.config
+C:\Users\Franco_\Desktop\gioco2\gioco2\bin\Debug\gioco2.exe
+C:\Users\Franco_\Desktop\gioco2\gioco2\bin\Debug\gioco2.pdb
+C:\Users\Franco_\Desktop\gioco2\gioco2\obj\Debug\gioco2.Form1.resources
+C:\Users\Franco_\Desktop\gioco2\gioco2\obj\Debug\gioco2.Properties.Resources.resources
+C:\Users\Franco_\Desktop\gioco2\gioco2\obj\Debug\gioco2.csproj.GenerateResource.Cache
+C:\Users\Franco_\Desktop\gioco2\gioco2\obj\Debug\gioco2.exe
+C:\Users\Franco_\Desktop\gioco2\gioco2\obj\Debug\gioco2.pdb
+C:\Users\Franco_\Desktop\gioco2\gioco2\obj\Debug\gioco2.csprojResolveAssemblyReference.cache
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\bin\Debug\gioco2.exe.config
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\obj\Debug\gioco2.exe
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\obj\Debug\gioco2.pdb
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\bin\Debug\gioco2.exe
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\bin\Debug\gioco2.pdb
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\obj\Debug\gioco2.csprojResolveAssemblyReference.cache
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\obj\Debug\gioco2.Form1.resources
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\obj\Debug\gioco2.Properties.Resources.resources
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco2\gioco2\obj\Debug\gioco2.csproj.GenerateResource.Cache
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.exe.config
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.exe
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.pdb
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.csprojResolveAssemblyReference.cache
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.Form1.resources
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.Properties.Resources.resources
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.csproj.GenerateResource.Cache
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\obj\Debug\gioco 2 v 2.0.exe
+C:\Users\Franco_\Documents\Visual Studio 2015\Projects\gioco 2 v 2.0\gioco2\obj\Debug\gioco 2 v 2.0.pdb
+G:\2\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.exe.config
+G:\2\gioco 2 v 2.0\gioco2\obj\Debug\gioco 2 v 2.0.exe
+G:\2\gioco 2 v 2.0\gioco2\obj\Debug\gioco 2 v 2.0.pdb
+G:\2\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.exe
+G:\2\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.pdb
+G:\2\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.csprojResolveAssemblyReference.cache
+G:\2\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.Form1.resources
+G:\2\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.Properties.Resources.resources
+G:\2\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.csproj.GenerateResource.Cache
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.exe.config
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.exe
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\bin\Debug\gioco 2 v 2.0.pdb
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.csprojAssemblyReference.cache
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.Form1.resources
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.Properties.Resources.resources
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.csproj.GenerateResource.cache
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco2.csproj.CoreCompileInputs.cache
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco 2 v 2.0.exe
+C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco 2 v 2.0.pdb
