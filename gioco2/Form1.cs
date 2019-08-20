@@ -47,7 +47,6 @@ namespace PingPong
         {
             Condition();
             Player1();
-            Player2();
             Output();
             Refresh();
         }
@@ -74,6 +73,7 @@ namespace PingPong
             timer1.Enabled = false;
             timer2.Enabled = false;
             timer3.Enabled = false;
+            timer4.Enabled = false;
             youwin.Visible = false;
             pingpong.Visible = true;
             gameover.Visible = false;
@@ -100,8 +100,8 @@ namespace PingPong
         {
             if (xball >= 300)
             {
-                if (yball > yplayer2 + 33 && yplayer2 + 4 < 228) yplayer2 += 4;
-                if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 4;
+                if (yball > yplayer2 + 33 && yplayer2 + 4 < 228) yplayer2 += 5;
+                if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 5;
             }
         }
         // Classe per il movimento della palla;
@@ -125,8 +125,8 @@ namespace PingPong
             SolidBrush BlueBrush = new SolidBrush(Color.FromArgb(0, 93, 253));
             SolidBrush WhiteBrush = new SolidBrush(Color.White);
             Rectangle ball = new Rectangle(xball, yball, 15, 15);
-            Rectangle rect1 = new Rectangle(10, yplayer1, 10, 90);
-            Rectangle rect2 = new Rectangle(564, yplayer2, 10, 90);
+            Rectangle rect1 = new Rectangle(10, yplayer1, 10, 70);
+            Rectangle rect2 = new Rectangle(564, yplayer2, 10, 70);
             e.Graphics.FillEllipse(WhiteBrush, ball);
             e.Graphics.FillRectangle(RedBrush, rect1);
             e.Graphics.FillRectangle(BlueBrush, rect2);
@@ -172,6 +172,7 @@ namespace PingPong
                 timer.Enabled = false;
                 timer2.Enabled = true;
                 timer3.Enabled = false;
+                timer3.Enabled = false;
                 gameover.Visible = true;
                 if (mod1) red+=5;
                 if (mod2) red-=5;
@@ -188,6 +189,7 @@ namespace PingPong
                 timer.Enabled = false;
                 timer2.Enabled = true;
                 timer3.Enabled = false;
+                timer4.Enabled = false;
                 youwin.Visible = true;
                 if (mod1) green += 5;
                 if (mod2) green -= 5;
@@ -196,6 +198,24 @@ namespace PingPong
                 youwin.ForeColor = Color.FromArgb(40, green, 40);
             }
         }
+
+        private void up()
+        {
+            if (scoreplayer1 == 2)
+            {
+                timer3.Interval = 6;
+                timer4.Interval = 5;
+            }
+        }
+
+        private void up1()
+        {
+            if (scoreplayer2 == 2)
+            {
+                timer3.Interval = 6;
+            }
+        }
+
         // Tasto premuto;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -224,6 +244,7 @@ namespace PingPong
             timer1.Stop();
             timer2.Stop();
             timer3.Stop();
+            timer4.Stop();
         }
 
         private void mnuStart_Click(object sender, EventArgs e)
@@ -259,6 +280,7 @@ namespace PingPong
                 timer.Enabled = true;
                 timer1.Enabled = true;
                 timer3.Enabled = true;
+                timer4.Enabled = true;
                 panel1.Visible = false;
                 pingpong.Visible = false;
             }
@@ -277,6 +299,7 @@ namespace PingPong
             timer.Enabled = false;
             timer1.Enabled = false;
             timer3.Enabled = false;
+            timer4.Enabled = false;
             panel1.Visible = true;
             pingpong.Visible = true;
             txtName1.ReadOnly = false;
@@ -291,6 +314,11 @@ namespace PingPong
         private void timer3_Tick(object sender, EventArgs e)
         {
             Ball();
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            Player2();
         }
     }
 }
