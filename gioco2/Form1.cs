@@ -211,13 +211,13 @@ namespace PingPong
             }
         }
 
-        // Tasto premuto;
+        // Key Down events to move the paddle -/+6 in either direction
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up) velplayer1 = -6;
             if (e.KeyCode == Keys.Down) velplayer1 = 6;
         }
-        // Tasto rilasciato;
+        // 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down) velplayer1 = 0;
