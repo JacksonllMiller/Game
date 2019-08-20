@@ -8,3 +8,13 @@ C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\PingPong.csproj.GenerateRe
 C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\PingPong.csproj.CoreCompileInputs.cache
 C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco 2 v 2.0.exe
 C:\Users\jacks\Desktop\gioco 2 v 2.0\gioco2\obj\Debug\gioco 2 v 2.0.pdb
+C:\Users\jacks\Documents\GitHub\Game\gioco2\bin\Debug\gioco 2 v 2.0.exe.config
+C:\Users\jacks\Documents\GitHub\Game\gioco2\bin\Debug\gioco 2 v 2.0.exe
+C:\Users\jacks\Documents\GitHub\Game\gioco2\bin\Debug\gioco 2 v 2.0.pdb
+C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\PingPong.csprojAssemblyReference.cache
+C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\PingPong.Form1.resources
+C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\gioco2.Properties.Resources.resources
+C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\PingPong.csproj.GenerateResource.cache
+C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\PingPong.csproj.CoreCompileInputs.cache
+C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\gioco 2 v 2.0.exe
+C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\gioco 2 v 2.0.pdb

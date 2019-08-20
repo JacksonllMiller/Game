@@ -49,18 +49,19 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtName1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.gameover = new System.Windows.Forms.Label();
             this.youwin = new System.Windows.Forms.Label();
             this.pingpong = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtName1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.riga)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -279,10 +280,47 @@
             this.panel1.Controls.Add(this.gameover);
             this.panel1.Controls.Add(this.youwin);
             this.panel1.Controls.Add(this.pingpong);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 326);
             this.panel1.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(181, 268);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 20);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Red Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6.Location = new System.Drawing.Point(352, 268);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 20);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Blue Name";
+            // 
+            // txtName1
+            // 
+            this.txtName1.Location = new System.Drawing.Point(341, 238);
+            this.txtName1.Name = "txtName1";
+            this.txtName1.Size = new System.Drawing.Size(100, 20);
+            this.txtName1.TabIndex = 29;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(168, 238);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 25;
+            this.txtName.VisibleChanged += new System.EventHandler(this.txtName_VisibleChanged);
             // 
             // gameover
             // 
@@ -337,42 +375,6 @@
             this.timer2.Interval = 4800;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(168, 238);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 25;
-            // 
-            // txtName1
-            // 
-            this.txtName1.Location = new System.Drawing.Point(341, 238);
-            this.txtName1.Name = "txtName1";
-            this.txtName1.Size = new System.Drawing.Size(100, 20);
-            this.txtName1.TabIndex = 29;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(352, 268);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Blue Name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(181, 268);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 20);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Red Name";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -402,6 +404,12 @@
             this.mnuStop.Size = new System.Drawing.Size(50, 24);
             this.mnuStop.Text = "Stop";
             this.mnuStop.Click += new System.EventHandler(this.mnuStop_Click);
+            // 
+            // timer3
+            // 
+            this.timer3.Enabled = true;
+            this.timer3.Interval = 15;
+            this.timer3.Tick += new System.EventHandler(this.timer3_Tick);
             // 
             // Form1
             // 
@@ -498,6 +506,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnuStart;
         private System.Windows.Forms.ToolStripMenuItem mnuStop;
+        private System.Windows.Forms.Timer timer3;
     }
 }
 

@@ -46,7 +46,6 @@ namespace PingPong
         private void timer_Tick(object sender, EventArgs e)
         {
             Condition();
-            Ball();
             Player1();
             Player2();
             Output();
@@ -74,6 +73,7 @@ namespace PingPong
             timer.Enabled = false;
             timer1.Enabled = false;
             timer2.Enabled = false;
+            timer3.Enabled = false;
             youwin.Visible = false;
             pingpong.Visible = true;
             gameover.Visible = false;
@@ -100,8 +100,8 @@ namespace PingPong
         {
             if (xball >= 300)
             {
-                if (yball > yplayer2 + 33 && yplayer2 + 6 < 228) yplayer2 += 6;
-                if (yball < yplayer2 + 33 && yplayer2 - 6 > 30) yplayer2 -= 6;
+                if (yball > yplayer2 + 33 && yplayer2 + 4 < 228) yplayer2 += 4;
+                if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 4;
             }
         }
         // Classe per il movimento della palla;
@@ -114,8 +114,8 @@ namespace PingPong
             }
             public int MoveVertical(int y, bool ballup, bool balldown, int extravervelball)
             {
-                if (ballup) return y - 3 - extravervelball;
-                else return y + 3 + extravervelball;
+                if (ballup) return y - 7 - extravervelball;
+                else return y + 7 + extravervelball;
             }
         }
         // Disegna la palla e i due rettangoli;
@@ -125,8 +125,8 @@ namespace PingPong
             SolidBrush BlueBrush = new SolidBrush(Color.FromArgb(0, 93, 253));
             SolidBrush WhiteBrush = new SolidBrush(Color.White);
             Rectangle ball = new Rectangle(xball, yball, 15, 15);
-            Rectangle rect1 = new Rectangle(10, yplayer1, 10, 100);
-            Rectangle rect2 = new Rectangle(564, yplayer2, 10, 100);
+            Rectangle rect1 = new Rectangle(10, yplayer1, 10, 90);
+            Rectangle rect2 = new Rectangle(564, yplayer2, 10, 90);
             e.Graphics.FillEllipse(WhiteBrush, ball);
             e.Graphics.FillRectangle(RedBrush, rect1);
             e.Graphics.FillRectangle(BlueBrush, rect2);
@@ -171,6 +171,7 @@ namespace PingPong
                 panel1.Visible = true;
                 timer.Enabled = false;
                 timer2.Enabled = true;
+                timer3.Enabled = false;
                 gameover.Visible = true;
                 if (mod1) red+=5;
                 if (mod2) red-=5;
@@ -186,6 +187,7 @@ namespace PingPong
                 panel1.Visible = true;
                 timer.Enabled = false;
                 timer2.Enabled = true;
+                timer3.Enabled = false;
                 youwin.Visible = true;
                 if (mod1) green += 5;
                 if (mod2) green -= 5;
@@ -221,6 +223,7 @@ namespace PingPong
             timer.Stop();
             timer1.Stop();
             timer2.Stop();
+            timer3.Stop();
         }
 
         private void mnuStart_Click(object sender, EventArgs e)
@@ -232,6 +235,8 @@ namespace PingPong
             {
                 //if playerName valid (only letters) 
                 MessageBox.Show("Red Team is Ready!");
+                txtName.ReadOnly = true;
+                txtName.Visible = false;
             }
             else
             {
@@ -248,9 +253,12 @@ namespace PingPong
             if (Regex.IsMatch(playerName1, @"^[a-zA-Z]+$"))//checks playerName for letters
             {
                 //if playerName valid (only letters) 
+                txtName1.ReadOnly = true;
+                txtName1.Visible = false;
                 MessageBox.Show("Blue Team Ready! Starting...");
                 timer.Enabled = true;
                 timer1.Enabled = true;
+                timer3.Enabled = true;
                 panel1.Visible = false;
                 pingpong.Visible = false;
             }
@@ -268,8 +276,21 @@ namespace PingPong
         {
             timer.Enabled = false;
             timer1.Enabled = false;
+            timer3.Enabled = false;
             panel1.Visible = true;
             pingpong.Visible = true;
+            txtName1.ReadOnly = false;
+            txtName.ReadOnly = false;
+        }
+
+        private void txtName_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            Ball();
         }
     }
 }
