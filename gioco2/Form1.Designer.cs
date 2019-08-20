@@ -50,8 +50,6 @@
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtName1 = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.gameover = new System.Windows.Forms.Label();
             this.youwin = new System.Windows.Forms.Label();
@@ -275,13 +273,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtName1);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.gameover);
             this.panel1.Controls.Add(this.youwin);
             this.panel1.Controls.Add(this.pingpong);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 326);
             this.panel1.TabIndex = 24;
@@ -291,33 +287,15 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(181, 268);
+            this.label3.Location = new System.Drawing.Point(254, 268);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 31;
             this.label3.Text = "Red Name";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(352, 268);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Blue Name";
-            // 
-            // txtName1
-            // 
-            this.txtName1.Location = new System.Drawing.Point(341, 238);
-            this.txtName1.Name = "txtName1";
-            this.txtName1.Size = new System.Drawing.Size(100, 20);
-            this.txtName1.TabIndex = 29;
-            // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(168, 238);
+            this.txtName.Location = new System.Drawing.Point(240, 238);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 25;
@@ -415,7 +393,7 @@
             // timer4
             // 
             this.timer4.Enabled = true;
-            this.timer4.Interval = 10;
+            this.timer4.Interval = 1;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // Form1
@@ -507,8 +485,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtName1;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnuStart;

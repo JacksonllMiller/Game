@@ -26,7 +26,6 @@ namespace PingPong
         int green;
         int xball;
         string playerName;
-        string playerName1;
         int yball;
         int yplayer1;
         int yplayer2;
@@ -93,14 +92,14 @@ namespace PingPong
         // Muove il giocatore 1;
         private void Player1()
         {
-            if (yplayer1 + velplayer1 < 228 && yplayer1 + velplayer1 > 30) yplayer1 += velplayer1;
+            if (yplayer1 + velplayer1 < 248 && yplayer1 + velplayer1 > 30) yplayer1 += velplayer1;
         }
         // Muove il giocatore 2;
         private void Player2()
         {
             if (xball >= 300)
             {
-                if (yball > yplayer2 + 33 && yplayer2 + 4 < 228) yplayer2 += 5;
+                if (yball > yplayer2 + 33 && yplayer2 + 4 < 248) yplayer2 += 5;
                 if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 5;
             }
         }
@@ -109,7 +108,7 @@ namespace PingPong
         {
             public int MoveHorizontal(int x, bool ballright, bool ballleft, int extrahorvelball)
             {
-                if (ballright) return x + 8 + extrahorvelball;
+                if (ballright) return x + 88 + extrahorvelball;
                 else return x - 8 - extrahorvelball;
             }
             public int MoveVertical(int y, bool ballup, bool balldown, int extravervelball)
@@ -125,8 +124,8 @@ namespace PingPong
             SolidBrush BlueBrush = new SolidBrush(Color.FromArgb(0, 93, 253));
             SolidBrush WhiteBrush = new SolidBrush(Color.White);
             Rectangle ball = new Rectangle(xball, yball, 15, 15);
-            Rectangle rect1 = new Rectangle(10, yplayer1, 10, 70);
-            Rectangle rect2 = new Rectangle(564, yplayer2, 10, 70);
+            Rectangle rect1 = new Rectangle(10, yplayer1, 10, 75);
+            Rectangle rect2 = new Rectangle(564, yplayer2, 10, 75);
             e.Graphics.FillEllipse(WhiteBrush, ball);
             e.Graphics.FillRectangle(RedBrush, rect1);
             e.Graphics.FillRectangle(BlueBrush, rect2);
@@ -147,13 +146,13 @@ namespace PingPong
             if (ballup) { ballup = false; balldown = true; }
             else { ballup = true; balldown = false; }
         }
-        // Output dei punti;
+        // ;
         private void Output()
         {
             label1.Text = scoreplayer1.ToString();
             label2.Text = scoreplayer2.ToString();
         }
-        // Serie di condizioni per il movimento della palla;
+        // ;
         private void Condition()
         {
             if (xball + 4 >= 550 && ballright && yball + 15 >= yplayer2 && yball <= yplayer2 + 100) { ballleft = true; ballright = false; }
@@ -169,6 +168,8 @@ namespace PingPong
             if (scoreplayer2 == 3)
             {
                 panel1.Visible = true;
+                txtName.ReadOnly = false;
+                txtName.Visible = true;
                 timer.Enabled = false;
                 timer2.Enabled = true;
                 timer3.Enabled = false;
@@ -186,6 +187,8 @@ namespace PingPong
             if (scoreplayer1 == 3)
             {
                 panel1.Visible = true;
+                txtName.ReadOnly = false;
+                txtName.Visible = true;
                 timer.Enabled = false;
                 timer2.Enabled = true;
                 timer3.Enabled = false;
@@ -203,16 +206,8 @@ namespace PingPong
         {
             if (scoreplayer1 == 2)
             {
-                timer3.Interval = 6;
-                timer4.Interval = 5;
-            }
-        }
+               timer3.Interval = 5;
 
-        private void up1()
-        {
-            if (scoreplayer2 == 2)
-            {
-                timer3.Interval = 6;
             }
         }
 
@@ -255,28 +250,9 @@ namespace PingPong
             if (Regex.IsMatch(playerName, @"^[a-zA-Z]+$"))//checks playerName for letters
             {
                 //if playerName valid (only letters) 
-                MessageBox.Show("Red Team is Ready!");
                 txtName.ReadOnly = true;
                 txtName.Visible = false;
-            }
-            else
-            {
-                //invalid playerName, clear txtName and focus on it to try again
-                MessageBox.Show("Please enter a name using letters only Red Team!");
-                txtName.Clear();
-
-                txtName.Focus();
-            }
-
-            playerName1 = txtName1.Text;
-
-
-            if (Regex.IsMatch(playerName1, @"^[a-zA-Z]+$"))//checks playerName for letters
-            {
-                //if playerName valid (only letters) 
-                txtName1.ReadOnly = true;
-                txtName1.Visible = false;
-                MessageBox.Show("Blue Team Ready! Starting...");
+                MessageBox.Show("Player Ready! Starting...");
                 timer.Enabled = true;
                 timer1.Enabled = true;
                 timer3.Enabled = true;
@@ -287,12 +263,13 @@ namespace PingPong
             else
             {
                 //invalid playerName, clear txtName and focus on it to try again
-                MessageBox.Show("Please enter a name using letters only Blue Team!");
-                txtName1.Clear();
+                MessageBox.Show("Please enter a name using letters only Red Team!");
+                txtName.Clear();
 
-                txtName1.Focus();
+                txtName.Focus();
             }
         }
+
 
         private void mnuStop_Click(object sender, EventArgs e)
         {
@@ -302,8 +279,8 @@ namespace PingPong
             timer4.Enabled = false;
             panel1.Visible = true;
             pingpong.Visible = true;
-            txtName1.ReadOnly = false;
             txtName.ReadOnly = false;
+            txtName.Visible = true;
         }
 
         private void txtName_VisibleChanged(object sender, EventArgs e)
