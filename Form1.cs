@@ -64,6 +64,20 @@ namespace Game
     "\n \n Enter your respective team names. " +
     "\n Click Start to begin", "Game Instructions");
             txtName.Focus();
+
+
+            ball = new Rectangle(this.Width / 2, this.Height / 2, 40, 40);
+            RSide = new Rectangle(this.Width - 50, this.Height / 2, 30, 150);
+            LSide = new Rectangle(5, this.Height / 2, 30, 150);
+
+            btm = new Bitmap(this.Width, this.Height);
+            g = Graphics.FromImage(btm);
+            SCG = this.CreateGraphics();
+
+            th = new Thread(draw);
+            th.IsBackground = true;
+
+            th.Start();
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -121,20 +135,14 @@ namespace Game
 
         }
 
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
         private void pnlGame_Paint(object sender, PaintEventArgs e)
         {
-            btm = new Bitmap(this.Width, this.Height);
-            g = Graphics.FromImage(btm);
-            SCG = this.CreateGraphics();
-
-            ball = new Rectangle(this.Width / 2, this.Height / 2, 40, 40);
-            RSide = new Rectangle(this.Width - 50, this.Height / 2, 30, 150);
-            LSide = new Rectangle(5, this.Height / 2, 30, 150);
-
-            th = new Thread(draw);
-            th.IsBackground = true;
-
-            th.Start();
+           
         }
 
         public void draw()
@@ -167,9 +175,16 @@ namespace Game
 
                 if (ball.X < -40) ball.X = this.Width / 2;
                 if (ball.X > this.Width) ball.X = this.Width / 2;
-            }
+
+                g.FillRectangle(Brushes.Blue, RSide);
+                g.FillRectangle(Brushes.Red, LSide);
+                g.FillEllipse(Brushes.Black, ball);
+
+                SCG.DrawImage(btm, 0, 0, this.Width, this.Height);
+            } 
         }
 
+        
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {

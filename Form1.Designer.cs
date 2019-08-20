@@ -52,7 +52,7 @@
             // pnlGame
             // 
             this.pnlGame.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlGame.Location = new System.Drawing.Point(12, 82);
+            this.pnlGame.Location = new System.Drawing.Point(31, 445);
             this.pnlGame.Name = "pnlGame";
             this.pnlGame.Size = new System.Drawing.Size(660, 367);
             this.pnlGame.TabIndex = 0;
@@ -237,6 +237,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

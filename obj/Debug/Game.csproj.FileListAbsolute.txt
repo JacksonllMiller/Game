@@ -18,3 +18,13 @@ C:\Users\jacks\Desktop\Game-Code\obj\Debug\Game.csproj.GenerateResource.cache
 C:\Users\jacks\Desktop\Game-Code\obj\Debug\Game.csproj.CoreCompileInputs.cache
 C:\Users\jacks\Desktop\Game-Code\obj\Debug\Game.exe
 C:\Users\jacks\Desktop\Game-Code\obj\Debug\Game.pdb
+C:\Users\jacks\Documents\GitHub\Game\bin\Debug\Game.exe.config
+C:\Users\jacks\Documents\GitHub\Game\bin\Debug\Game.exe
+C:\Users\jacks\Documents\GitHub\Game\bin\Debug\Game.pdb
+C:\Users\jacks\Documents\GitHub\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\jacks\Documents\GitHub\Game\obj\Debug\Game.Form1.resources
+C:\Users\jacks\Documents\GitHub\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\jacks\Documents\GitHub\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\jacks\Documents\GitHub\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\jacks\Documents\GitHub\Game\obj\Debug\Game.exe
+C:\Users\jacks\Documents\GitHub\Game\obj\Debug\Game.pdb
