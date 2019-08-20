@@ -15,7 +15,7 @@ namespace PingPong
 {
     public partial class Form1 : Form
     {
-        // Dichiarazione delle variabili;
+        // Declaring all variables
         bool mod1;
         bool mod2;
         bool ballup;
@@ -34,14 +34,14 @@ namespace PingPong
         int scoreplayer2;
         int extrahorvelball;
         int extravervelball;
-        // Carica la Form1;
+        // Form1
         public Form1()
         {
             InitializeComponent();
             reset();
             Begin();
         }
-        // Esegue il codice dopo 1 millisecondo;
+        // Declaring the components within timer_Tick
         private void timer_Tick(object sender, EventArgs e)
         {
             Condition();
@@ -49,19 +49,19 @@ namespace PingPong
             Output();
             Refresh();
         }
-        // Esegue il codice dopo 1 millisecondo;
+        // Declaring the components within timer1_Tick
         private void timer1_Tick(object sender, EventArgs e)
         {
             Win();
             GameOver();
         }
-        // Esegue il codice dopo 5 secondi;
+        // Declaring the components within timer2_Tick
         private void timer2_Tick(object sender, EventArgs e)
         {
             reset();
             Begin();
         }
-        // esegue il codice al caricamento della form1
+        // Setting all the values and timers for when the form is loaded
         private void Begin()
         {
             scoreplayer1 = 0;
@@ -82,19 +82,19 @@ namespace PingPong
 
         }
 
-        // Muove la palla;
+        // Creating the Ball and it's movement
         private void Ball()
         {
             ball Ball = new ball();
             xball = Ball.MoveHorizontal(xball, ballright, ballleft, extrahorvelball);
             yball = Ball.MoveVertical(yball, ballup, balldown, extravervelball);
         }
-        // Muove il giocatore 1;
+        // Creating Player1 and their movement/boundries
         private void Player1()
         {
             if (yplayer1 + velplayer1 < 248 && yplayer1 + velplayer1 > 30) yplayer1 += velplayer1;
         }
-        // Muove il giocatore 2;
+        // Creating Player2 and their moevement/boundries
         private void Player2()
         {
             if (xball >= 300)
@@ -103,7 +103,7 @@ namespace PingPong
                 if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 5;
             }
         }
-        // Classe per il movimento della palla;
+        // Creating the class for the ball and declaring its boundries/speed
         class ball
         {
             public int MoveHorizontal(int x, bool ballright, bool ballleft, int extrahorvelball)
@@ -117,7 +117,7 @@ namespace PingPong
                 else return y + 7 + extravervelball;
             }
         }
-        // Disegna la palla e i due rettangoli;
+        // Painting the objects onto the 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             SolidBrush RedBrush = new SolidBrush(Color.FromArgb(151, 0, 0));
@@ -227,12 +227,11 @@ namespace PingPong
         private void Form1_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Use your specific keys to move your paddle. " +
-  "\n Blue Team: |Up Arrow, Down arrow| |Numpad Arrow Up + Down| " +
-  "\n Red Team: |W Key, S Key| |H Key, N Key| " +
+  "\n Blue |Up Arrow, Down arrow| " +
   "\n Don't let the ball reach your end. " +
   "\n Every ball that gets passed is a point." +
-  "\n Keep and eye on the time as the pace might start to pick up. " +
-  "\n \n Enter your respective team names. " +
+  "\n When you get 2 points, the ball pace will speed up. " +
+  "\n \n Enter your name. " +
   "\n Click Start to begin", "Game Instructions");
             //txtName.Focus();
             timer.Stop();
