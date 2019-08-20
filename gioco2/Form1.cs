@@ -214,18 +214,22 @@ namespace PingPong
         // Key Down events to move the paddle -/+6 in either direction
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            // if key is down then move player -6
             if (e.KeyCode == Keys.Up) velplayer1 = -6;
             if (e.KeyCode == Keys.Down) velplayer1 = 6;
         }
-        // 
+        // Key Up events to stop the paddle
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
+            // if key is up then stop moving player
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down) velplayer1 = 0;
             if (e.KeyCode == Keys.Escape) this.Close();
         }
 
+        // When Form1 is loaded 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // show a message box
             MessageBox.Show("Use your specific keys to move your paddle. " +
   "\n Blue |Up Arrow, Down arrow| " +
   "\n Don't let the ball reach your end. " +
@@ -233,7 +237,8 @@ namespace PingPong
   "\n When you get 2 points, the ball pace will speed up. " +
   "\n \n Enter your name. " +
   "\n Click Start to begin", "Game Instructions");
-            //txtName.Focus();
+
+            // turn all timers off until the game begins
             timer.Stop();
             timer1.Stop();
             timer2.Stop();
@@ -241,6 +246,7 @@ namespace PingPong
             timer4.Stop();
         }
 
+        // when the start button is clicked
         private void mnuStart_Click(object sender, EventArgs e)
         {
             playerName = txtName.Text;
