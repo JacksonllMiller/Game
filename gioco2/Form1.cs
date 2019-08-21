@@ -40,6 +40,7 @@ namespace PingPong
             InitializeComponent();
             reset();
             Begin();
+            Data d;
         }
         // Declaring the components within timer_Tick
         private void timer_Tick(object sender, EventArgs e)

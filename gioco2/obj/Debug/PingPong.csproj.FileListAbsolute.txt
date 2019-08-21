@@ -28,3 +28,13 @@ C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\PingPong.csproj.GenerateRe
 C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\PingPong.csproj.CoreCompileInputs.cache
 C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\Game.exe
 C:\Users\jacks\Documents\GitHub\Game\gioco2\obj\Debug\Game.pdb
+H:\Github\Game\Game\gioco2\bin\Debug\Game.exe.config
+H:\Github\Game\Game\gioco2\bin\Debug\Game.exe
+H:\Github\Game\Game\gioco2\bin\Debug\Game.pdb
+H:\Github\Game\Game\gioco2\obj\Debug\PingPong.csprojAssemblyReference.cache
+H:\Github\Game\Game\gioco2\obj\Debug\PingPong.Form1.resources
+H:\Github\Game\Game\gioco2\obj\Debug\Game.Properties.Resources.resources
+H:\Github\Game\Game\gioco2\obj\Debug\PingPong.csproj.GenerateResource.cache
+H:\Github\Game\Game\gioco2\obj\Debug\PingPong.csproj.CoreCompileInputs.cache
+H:\Github\Game\Game\gioco2\obj\Debug\Game.exe
+H:\Github\Game\Game\gioco2\obj\Debug\Game.pdb
