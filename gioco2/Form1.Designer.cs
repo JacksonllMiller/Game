@@ -61,6 +61,12 @@
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblHigh1 = new System.Windows.Forms.Label();
+            this.lblHigh2 = new System.Windows.Forms.Label();
+            this.lblHigh3 = new System.Windows.Forms.Label();
+            this.lblHigh4 = new System.Windows.Forms.Label();
+            this.lblHigh5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.riga)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -272,12 +278,18 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.lblHigh5);
+            this.panel1.Controls.Add(this.lblHigh4);
+            this.panel1.Controls.Add(this.lblHigh3);
+            this.panel1.Controls.Add(this.lblHigh2);
+            this.panel1.Controls.Add(this.lblHigh1);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.gameover);
             this.panel1.Controls.Add(this.youwin);
             this.panel1.Controls.Add(this.pingpong);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 326);
             this.panel1.TabIndex = 24;
@@ -396,6 +408,72 @@
             this.timer4.Interval = 1;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(235, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 25);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "HIGHSCORES";
+            // 
+            // lblHigh1
+            // 
+            this.lblHigh1.AutoSize = true;
+            this.lblHigh1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHigh1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblHigh1.Location = new System.Drawing.Point(288, 112);
+            this.lblHigh1.Name = "lblHigh1";
+            this.lblHigh1.Size = new System.Drawing.Size(15, 18);
+            this.lblHigh1.TabIndex = 33;
+            this.lblHigh1.Text = "3";
+            // 
+            // lblHigh2
+            // 
+            this.lblHigh2.AutoSize = true;
+            this.lblHigh2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHigh2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblHigh2.Location = new System.Drawing.Point(288, 134);
+            this.lblHigh2.Name = "lblHigh2";
+            this.lblHigh2.Size = new System.Drawing.Size(15, 18);
+            this.lblHigh2.TabIndex = 34;
+            this.lblHigh2.Text = "3";
+            // 
+            // lblHigh3
+            // 
+            this.lblHigh3.AutoSize = true;
+            this.lblHigh3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHigh3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblHigh3.Location = new System.Drawing.Point(288, 152);
+            this.lblHigh3.Name = "lblHigh3";
+            this.lblHigh3.Size = new System.Drawing.Size(15, 18);
+            this.lblHigh3.TabIndex = 35;
+            this.lblHigh3.Text = "3";
+            // 
+            // lblHigh4
+            // 
+            this.lblHigh4.AutoSize = true;
+            this.lblHigh4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHigh4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblHigh4.Location = new System.Drawing.Point(288, 170);
+            this.lblHigh4.Name = "lblHigh4";
+            this.lblHigh4.Size = new System.Drawing.Size(15, 18);
+            this.lblHigh4.TabIndex = 36;
+            this.lblHigh4.Text = "3";
+            // 
+            // lblHigh5
+            // 
+            this.lblHigh5.AutoSize = true;
+            this.lblHigh5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHigh5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblHigh5.Location = new System.Drawing.Point(288, 188);
+            this.lblHigh5.Name = "lblHigh5";
+            this.lblHigh5.Size = new System.Drawing.Size(15, 18);
+            this.lblHigh5.TabIndex = 37;
+            this.lblHigh5.Text = "3";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -491,6 +569,12 @@
         private System.Windows.Forms.ToolStripMenuItem mnuStop;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Label lblHigh5;
+        private System.Windows.Forms.Label lblHigh4;
+        private System.Windows.Forms.Label lblHigh3;
+        private System.Windows.Forms.Label lblHigh2;
+        private System.Windows.Forms.Label lblHigh1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
