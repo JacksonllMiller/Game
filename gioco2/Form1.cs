@@ -102,13 +102,22 @@ namespace PingPong
                 if (yball > yplayer2 + 33 && yplayer2 + 4 < 248) yplayer2 += 5;
                 if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 5;
             }
+            if (scoreplayer1 == 2)
+            {
+                if (xball >= 498)
+                {
+                    if (yball > yplayer2 + 33 && yplayer2 + 4 < 248) yplayer2 += 5;
+                    if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 5;
+
+                }
+            }
         }
         // Creating the class for the ball and declaring its boundries/speed
         class ball
         {
             public int MoveHorizontal(int x, bool ballright, bool ballleft, int extrahorvelball)
             {
-                if (ballright) return x + 88 + extrahorvelball;
+                if (ballright) return x + 8 + extrahorvelball;
                 else return x - 8 - extrahorvelball;
             }
             public int MoveVertical(int y, bool ballup, bool balldown, int extravervelball)
