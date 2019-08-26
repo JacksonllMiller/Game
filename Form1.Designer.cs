@@ -49,7 +49,7 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCheck = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.gameover = new System.Windows.Forms.Label();
@@ -62,7 +62,7 @@
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lblHigh1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.riga)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -274,7 +274,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.btnCheck);
+            this.panel1.Controls.Add(this.lblHigh1);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.gameover);
@@ -285,15 +286,16 @@
             this.panel1.Size = new System.Drawing.Size(584, 326);
             this.panel1.TabIndex = 24;
             // 
-            // btnCheck
+            // label4
             // 
-            this.btnCheck.Location = new System.Drawing.Point(227, 198);
-            this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(126, 23);
-            this.btnCheck.TabIndex = 34;
-            this.btnCheck.Text = "Check Highscores";
-            this.btnCheck.UseVisualStyleBackColor = true;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(235, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(144, 24);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "HIGHSCORES";
             // 
             // label3
             // 
@@ -312,7 +314,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 25;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.VisibleChanged += new System.EventHandler(this.txtName_VisibleChanged);
             // 
             // gameover
@@ -410,10 +411,16 @@
             this.timer4.Interval = 1;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
-            // contextMenuStrip1
+            // lblHigh1
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.lblHigh1.AutoSize = true;
+            this.lblHigh1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHigh1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblHigh1.Location = new System.Drawing.Point(288, 112);
+            this.lblHigh1.Name = "lblHigh1";
+            this.lblHigh1.Size = new System.Drawing.Size(16, 16);
+            this.lblHigh1.TabIndex = 33;
+            this.lblHigh1.Text = "0";
             // 
             // Form1
             // 
@@ -510,8 +517,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuStop;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer4;
-        private System.Windows.Forms.Button btnCheck;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblHigh1;
     }
 }
 

@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using PingPongGame;
+using PingPongGame.Classes;
 
 namespace PingPong
 {
@@ -41,6 +41,10 @@ namespace PingPong
             InitializeComponent();
             reset();
             Begin();
+            Data.Save(new HighScore(), "hs1");
+
+            var hs = Data.Load<HighScore>("hs1");
+            lblHigh1.Text = $"{hs.Name} - {hs.Score}";
         }
         // Declaring the components within timer_Tick
         private void timer_Tick(object sender, EventArgs e)
@@ -65,6 +69,8 @@ namespace PingPong
         // Setting all the values and timers for when the form is loaded
         private void Begin()
         {
+            scoreplayer1 = 0;
+            scoreplayer2 = 0;
             extrahorvelball = 0;
             extravervelball = 0;
             timer.Enabled = false;
@@ -103,10 +109,10 @@ namespace PingPong
             }
             if (scoreplayer1 == 2)
             {
-                if (xball >= 515)
+                if (xball >= 501)
                 {
-                    if (yball > yplayer2 + 33 && yplayer2 + 4 < 248) yplayer2 += 7;
-                    if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 7;
+                    if (yball > yplayer2 + 33 && yplayer2 + 4 < 248) yplayer2 += 6;
+                    if (yball < yplayer2 + 33 && yplayer2 - 4 > 30) yplayer2 -= 6;
 
                 }
             }
@@ -239,45 +245,39 @@ namespace PingPong
         {
             // show a message box
             MessageBox.Show("Use your specific keys to move your paddle. " +
-  "\n |Up Arrow, Down arrow| " +
+  "\n Blue |Up Arrow, Down arrow| " +
   "\n Don't let the ball reach your end. " +
   "\n Every ball that gets passed is a point." +
   "\n When you get 2 points, the ball pace will speed up. " +
-   "\n When you get 4 points, you will win. " +
   "\n \n Enter your name. " +
   "\n Click Start to begin", "Game Instructions");
-            scoreplayer1 = 0;
-            btnCheck.Visible = false;
+
             // turn all timers off until the game begins
             timer.Stop();
             timer1.Stop();
             timer2.Stop();
             timer3.Stop();
             timer4.Stop();
-            
         }
 
         // when the start button is clicked
         private void mnuStart_Click(object sender, EventArgs e)
         {
-            scoreplayer1 = 0;
-            scoreplayer2 = 0;
             playerName = txtName.Text;
+
 
             if (Regex.IsMatch(playerName, @"^[a-zA-Z]+$"))//checks playerName for letters
             {
                 //if playerName valid (only letters) 
-                btnCheck.Visible = true;
                 txtName.ReadOnly = true;
                 txtName.Visible = false;
-                panel1.Visible = false;
-                pingpong.Visible = false;
                 MessageBox.Show("Player Ready! Starting...");
                 timer.Enabled = true;
                 timer1.Enabled = true;
                 timer3.Enabled = true;
                 timer4.Enabled = true;
-                
+                panel1.Visible = false;
+                pingpong.Visible = false;
             }
             else
             {
@@ -315,24 +315,6 @@ namespace PingPong
         private void timer4_Tick(object sender, EventArgs e)
         {
             Player2();
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHigh1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCheck_Click(object sender, EventArgs e)
-        {
-            scoreplayer1 = 0;
-            frmHighScores frmHighScore2 = new frmHighScores(txtName.Text, label1.Text);
-            Hide();
-            frmHighScore2.ShowDialog();
         }
     }
 }
